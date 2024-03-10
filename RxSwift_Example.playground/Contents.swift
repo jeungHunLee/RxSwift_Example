@@ -11,6 +11,8 @@ Observable.from([1, 2, 3, 4, 5, 6, 7, 8, 9])
     }
     .subscribe(onNext: { number in
         print(number)
+    }, onCompleted: {
+        print("completed")
     })
     .disposed(by: disposeBag)
 
