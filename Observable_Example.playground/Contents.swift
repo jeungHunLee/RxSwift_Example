@@ -3,11 +3,23 @@ import RxSwift
 //just method
 let justObservable = Observable<Int>.just(1)
 
-justObservable.subscribe(onNext: { item in
-    print(item)
-}, onCompleted: {
-    print("onCompleted")
-})
+justObservable.subscribe(
+    onNext: { item in
+        print(item)
+    }, onCompleted: {
+        print("onCompleted")
+    })
+
+//empty method
+let emptyObservable = Observable<Any>.empty()
+
+emptyObservable.subscribe(
+    onNext: { item in
+        print(item)
+    }, onCompleted: {
+        print("onCompleted")
+    }
+)
 
 //from method
 let fromObservable = Observable<Int>.from([1, 2, 3, 4, 5])
