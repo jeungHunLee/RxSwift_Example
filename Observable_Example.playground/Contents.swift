@@ -1,9 +1,9 @@
 import RxSwift
 
 //just method
-let justOobservable = Observable<Int>.just(1)
+let justObservable = Observable<Int>.just(1)
 
-justOobservable.subscribe(onNext: { item in
+justObservable.subscribe(onNext: { item in
     print(item)
 }, onCompleted: {
     print("onCompleted")
